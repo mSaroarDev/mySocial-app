@@ -6,7 +6,7 @@ export default function Heading() {
     <>
       <View>
         <View style={styles.titleBar}>
-          <Text style={styles.brand}>Facebook</Text>
+          <Text style={styles.brand}>facebook</Text>
 
           <View style={styles.topButtons}>
             <Image

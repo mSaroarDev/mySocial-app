@@ -1,7 +1,9 @@
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import Heading from './src/components/Heading';
 import Menus from './src/components/Menus';
 import PostNow from './src/components/PostNow';
+import StoriesCards from './src/components/StoriesCards';
+import PostsList from './src/components/PostsList';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -12,7 +14,11 @@ function App() {
       <View style={styles.container}>
         <Heading />
         <Menus />
-        <PostNow />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <PostNow />
+          <StoriesCards />
+          <PostsList />
+        </ScrollView>
       </View>
     </>
   );
@@ -21,7 +27,6 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
     padding: 10,
   },
   titleBar: {
